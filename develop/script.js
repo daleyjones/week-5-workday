@@ -1,5 +1,12 @@
-
-$(function () {
+$(function() {
+    var timeDisplayEl = $("#current-time");
+  
+    // Update the time display every second
+    setInterval(function() {
+      var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
+      timeDisplayEl.text(rightNow);
+    }, 1000);
+  
     // Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
     // local storage. 
@@ -7,7 +14,7 @@ $(function () {
       var hourId = $(this).parent().attr("id");
       var description = $(this).siblings(".description").val();
       localStorage.setItem(hourId, description);
-      console.log();
+      console.log("Saved description: " + description);
     });
   
     // Add code to apply the past, present, or future class to each time
@@ -35,3 +42,4 @@ $(function () {
     // Add code to display the current date in the header of the page.
     $("#currentDay").text(dayjs().format("dddd, MMMM D"));
   });
+  
