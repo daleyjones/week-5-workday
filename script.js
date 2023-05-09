@@ -16,7 +16,7 @@ $(function() {
   
  
     var currentHour = dayjs().hour();
-    $(".time-block") (function() {
+    $(".time-block").each(function() {
       var hourBlock = parseInt($(this).attr("id").split("-")[1]);
       if (hourBlock < currentHour) {
         $(this).addClass("past");
@@ -28,7 +28,7 @@ $(function() {
     });
   
    
-    $(".description") (function() {
+    $(".description").each(function() {
       var hourId = $(this).parent().attr("id");
       var description = localStorage.getItem(hourId);
       $(this).val(description);
