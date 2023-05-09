@@ -14,7 +14,7 @@ This calendar application was created using HTML, CSS, and JavaScript.
 # Credits
 This project was created by [Daley Jones].
 
-Link to my calender https://daleyjones.github.io/week-5-workday/  + Screenshot of calender (./images/calender.png)  
+Link to my calender https://daleyjones.github.io/week-5-workday/  ![Screenshot of my calender.](./images/calender.png)
 # License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
